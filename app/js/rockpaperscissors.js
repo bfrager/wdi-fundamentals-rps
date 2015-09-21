@@ -78,12 +78,17 @@ function playToFive() {
     while ((playerWins < 5) && (computerWins < 5)) {
         var playerTurn = getPlayerMove();
         var computerTurn = getComputerMove();
+        console.log('Player chose ' + playerTurn + ' & Computer chose ' + computerTurn);
         var roundWinner = getWinner(playerTurn, computerTurn);
         if (roundWinner === 'player') {
             playerWins += 1;
+            console.log(roundWinner + 'wins!');
         } else if (roundWinner === 'computer') {
             computerWins += 1;
-        }
-        return [playerWins, computerWins];
+            console.log(roundWinner + 'wins!');
+        } else {
+            console.log('Tie sucka!');
+        console.log('The score is currently Player: ' + playerWins + ' to Computer: ' + computerWins + '\n');
     }
+    return [playerWins, computerWins];
 }
