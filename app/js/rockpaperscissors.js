@@ -88,6 +88,7 @@ function playToFive() {
             console.log(roundWinner + 'wins!');
         } else {
             console.log('Tie sucka!');
+        }
         console.log('The score is currently Player: ' + playerWins + ' to Computer: ' + computerWins + '\n');
     }
     return [playerWins, computerWins];
